@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "CG Enviroment Indentifier",
+    "version": "0.1",
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+            "*://oms.snoco.org/*",
+            "*://omsdev.snoco.org/*"
+    ],
+      "background": {
+        "service_worker": "background.js"
+      },
+      "content_scripts": [
+        {
+          "matches": [
+            "*://omsdev.snoco.org/Cartegraphtest/*",
+            "*://omsdev.snoco.org/Cartegraphdev/*",
+            "*://oms.snoco.org/Cartegraph/*"
+          ],
+          "js": ["content.js"],
+          "run_at": "document_idle"
+      }
+    ]
+  }
