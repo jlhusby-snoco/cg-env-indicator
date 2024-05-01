@@ -6,6 +6,7 @@ function appendDivToMenu(urlSegment) {
     //Define the containter and element in adjacent it will insert new DIV
     const menuDiv = document.getElementById('menu');
     const logoDiv = document.getElementById('logo');
+    const bgElement = document.getElementsByClassName('scroll-container');
     
     //Look for already inserted DIV
     var   alertDiv = document.getElementById('enviromentAlert');
@@ -15,10 +16,11 @@ function appendDivToMenu(urlSegment) {
     } else {
         // Make it Purple
     
-        bgElement = document.getElementsByClassName('scroll-contianer');
-
-        bgElement.style.cssText = "background-color: purple";  // Add style directly to element
-        
+        if (bgElement){
+            bgElement.style.cssText = "background-color: purple";  // Add style directly to element
+        } else {
+            console.log('Could not find scroll element');
+        }
         if (menuDiv) {
             const newDiv = document.createElement('div');
             newDiv.innerHTML = `${urlSegment}`; // Customize content based on URL segment
