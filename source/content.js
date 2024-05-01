@@ -14,10 +14,10 @@ function appendDivToMenu(urlSegment) {
         return false 
     } else {
         // Make it Purple
-        bgScrollColor = "Background-color: Purple";
+    
         bgElement = document.getElementById('dashboard');
 
-        bgElement.style.cssText(bgScrollColor);  // Add style directly to element
+        bgElement.style.cssText = "background-color: purple";  // Add style directly to element
         
         if (menuDiv) {
             const newDiv = document.createElement('div');
