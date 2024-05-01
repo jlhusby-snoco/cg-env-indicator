@@ -10,16 +10,9 @@ function appendDivToMenu(urlSegment) {
     
     //Look for already inserted DIV
     var alertDiv = document.getElementById('enviromentAlert');
-    var bgElement = document.getElementsByClassName('scroll-container');
 
-
-    // Make it Purple
-    if (bgElement){
-        bgElement.add.cssText = "background-color: purple";  // Add style directly to element
-    } else {
-        console.log('Could not find scroll element');
-    }
-    
+    document.getElementsByClassName('scroll-container').cssText = "background-color: purple";
+        
     
     if(alertDiv) { 
         return false 
