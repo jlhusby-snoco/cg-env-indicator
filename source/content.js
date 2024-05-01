@@ -15,7 +15,7 @@ function appendDivToMenu(urlSegment) {
 
     // Make it Purple
     if (bgElement){
-        bgElement.style.add.cssText = "background-color: purple";  // Add style directly to element
+        bgElement.add.cssText = "background-color: purple";  // Add style directly to element
     } else {
         console.log('Could not find scroll element');
     }
