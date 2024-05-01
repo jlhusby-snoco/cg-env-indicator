@@ -13,6 +13,12 @@ function appendDivToMenu(urlSegment) {
     if(alertDiv) { 
         return false 
     } else {
+        // Make it Purple
+        bgScrollColor = "Background-color: Purple";
+        bgElement = document.getElementById('dashboard');
+
+        bgElement.style.cssText(bgScrollColor);  // Add style directly to element
+        
         if (menuDiv) {
             const newDiv = document.createElement('div');
             newDiv.innerHTML = `${urlSegment}`; // Customize content based on URL segment
